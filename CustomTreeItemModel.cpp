@@ -79,7 +79,7 @@ Qt::ItemFlags CustomTreeItemModel::flags(const QModelIndex &index) const
     //节点是否允许编辑
     Qt::ItemFlags flags = QAbstractItemModel::flags(index);
     flags |= Qt::ItemIsEditable;
-    qDebug()<<"Qt::ItemFlags CustomTreeItemModel::flags(const QModelIndex &index) const" << flags;
+//    qDebug()<<"Qt::ItemFlags CustomTreeItemModel::flags(const QModelIndex &index) const" << flags;
     return flags;
 }
 
@@ -94,7 +94,7 @@ QVariant CustomTreeItemModel::data(const QModelIndex &index, int role) const
     } else if (Qt::SizeHintRole == role) {
         return QVariant(ss);
     } else if (Qt::EditRole == role) {
-        qDebug() << "EditRole";
+//        qDebug() << "EditRole";
         return item->data(index.column());
     }
     return QVariant();
@@ -103,13 +103,13 @@ QVariant CustomTreeItemModel::data(const QModelIndex &index, int role) const
 bool CustomTreeItemModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     //TreeModel::setData 是重写的父类函数，是在编辑完后会被自动调用的函数
-    //TreeItem::setData 是我自己写的函数，来真正修改数据
+    //TreeItem::setData 是自定义的函数，来真正修改数据
     if (index.isValid() && role == Qt::EditRole)
     {
         CustomTreeItem *item = static_cast<CustomTreeItem *>(index.internalPointer());
         item->setData(index.column(), value);
         emit dataChanged(index, index);
-        qDebug()<<"mkmk";
+//        qDebug()<<"mkmk";
         return true;
     }
     return false;
@@ -148,6 +148,37 @@ CustomTreeItem *CustomTreeItemModel::root()
 }
 
 
+CustomFilterModel::CustomFilterModel(QObject *parent) : QSortFilterProxyModel (parent)
+{
+
+}
+CustomFilterModel::~CustomFilterModel()
+{
+    delete keyWord;
+}
+
+bool CustomFilterModel::filterAcceptsRow(int source_row, const QModelIndex& source_parent) const
+{
+    QModelIndex idx = sourceModel()->index(source_row, searchColumn, source_parent);
+    CustomTreeItem *it = idx.data(Qt::UserRole).value<CustomTreeItem *>();
+    if (it != nullptr) {
+        QString origin = it->data(searchColumn).toString();
+        qDebug() << "fffff" << origin;
+        if (keyWord!=nullptr && origin.contains(keyWord)) {
+            return true;
+        }
+
+        for (int row = 0 ; row <it->childCount() ; row++) {
+            CustomTreeItem *childItem = it->child(row);
+            qDebug() << "child:" << childItem->data(searchColumn).toString();
+            if (keyWord!=nullptr && childItem->data(searchColumn).toString().contains(keyWord)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
 
 
 

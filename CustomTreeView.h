@@ -4,6 +4,7 @@
 #include <QWidget>
 class CustomTreeItemModel;
 class CustomTreeItemStyleDelegate;
+class CustomFilterModel;
 
 namespace Ui {
 class CustomTreeView;
@@ -22,10 +23,13 @@ private slots:
 
     void on_searchBtn_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::CustomTreeView *ui;
     void setUpSubViews();
     CustomTreeItemModel *m_dataModel = nullptr;
+    CustomFilterModel *m_filterModel = nullptr;
     CustomTreeItemStyleDelegate *treeViewDelegate = nullptr;
 };
 

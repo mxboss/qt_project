@@ -52,8 +52,13 @@ void CustomTreeItemStyleDelegate::paint(QPainter *painter, const QStyleOptionVie
         if (option.state.testFlag(QStyle::State_Selected)) {
             painter->fillRect(option.rect, COLOR_SELECTED);
         }
-
-        painter->drawText(option.rect,Qt::AlignCenter,QString::number(dataArr[index.column()].toInt()));
+        if (mMatchWord.length() > 0) {
+            DrawKeyword(painter,option,index);
+        } else {
+            QString text = dataArr[0].toString();
+            painter->drawText(option.rect,Qt::AlignLeft | Qt::AlignVCenter,text);
+        }
+//        painter->drawText(option.rect,Qt::AlignCenter,dataArr[index.column()].toString());
     } else if (index.column() == 1) {
         if (mMatchWord.length() > 0) {
             DrawKeyword(painter,option,index);
@@ -166,7 +171,7 @@ void CustomTreeItemStyleDelegate::DrawKeyword(QPainter *painter,
         }
         painter->restore();
     }
-    qDebug()<<list;
+//    qDebug()<<list;
 }
 
 QStringList CustomTreeItemStyleDelegate::SpliteWord(QString originWord) const
