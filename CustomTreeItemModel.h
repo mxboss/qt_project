@@ -38,4 +38,19 @@ private:
     CustomTreeItem *mRootItem;    // 根节点
 };
 
+#include <QSortFilterProxyModel>
+
+class CustomFilterModel : public QSortFilterProxyModel
+{
+    Q_OBJECT
+
+public:
+    CustomFilterModel(QObject *parent = nullptr);
+    ~CustomFilterModel();
+
+    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const override;
+    int searchColumn = 0;
+    QString *keyWord = nullptr;
+};
+
 #endif // CUSTOMTREEITEMMODEL_H

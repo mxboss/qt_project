@@ -19,7 +19,7 @@
      <item>
       <widget class="QPushButton" name="loadBtn">
        <property name="text">
-        <string>Load</string>
+        <string>加载数据</string>
        </property>
       </widget>
      </item>
@@ -53,14 +53,25 @@ QTreeView::branch:closed:has-children{ image:url(:/my/image/1plus.png);}</string
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="searchBtn">
-       <property name="text">
-        <string>Search</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="searchBtn">
+         <property name="text">
+          <string>搜索姓名</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>搜索入学年级</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QTreeView" name="searchTreeView"/>
+      <widget class="QTreeView" name="filterTreeView"/>
      </item>
     </layout>
    </item>
