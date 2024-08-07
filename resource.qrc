@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/my">
+        <file>mock/home_page.json</file>
+        <file>mock/school.json</file>
+        <file>image/1minus.png</file>
+        <file>image/1plus.png</file>
+        <file>image/monkey_sun.jpg</file>
+    </qresource>
+</RCC>
