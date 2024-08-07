@@ -1,0 +1,741 @@
+[
+  {
+    "school": "北京大学",
+    "students": [
+      {
+        "name": "张伟",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 95,
+          "physics": 88,
+          "chemistry": 92,
+          "computer": 85,
+          "english": 90,
+          "history": 87
+        }
+      },
+      {
+        "name": "李静",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 78,
+          "physics": 80,
+          "chemistry": 85,
+          "computer": 89,
+          "english": 84,
+          "history": 77
+        }
+      },
+      {
+        "name": "王强",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 88,
+          "physics": 90,
+          "chemistry": 91,
+          "computer": 92,
+          "english": 85,
+          "history": 89
+        }
+      },
+      {
+        "name": "赵敏",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 82,
+          "physics": 79,
+          "chemistry": 88,
+          "computer": 90,
+          "english": 91,
+          "history": 84
+        }
+      },
+      {
+        "name": "孙浩",
+        "gender": "男",
+        "grade": "2013",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 90,
+          "computer": 93,
+          "english": 88,
+          "history": 86
+        }
+      }
+    ]
+  },
+  {
+    "school": "清华大学",
+    "students": [
+      {
+        "name": "钱莉",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 90,
+          "physics": 85,
+          "chemistry": 93,
+          "computer": 88,
+          "english": 92,
+          "history": 91
+        }
+      },
+      {
+        "name": "周杰",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 86,
+          "physics": 89,
+          "chemistry": 85,
+          "computer": 90,
+          "english": 87,
+          "history": 84
+        }
+      },
+      {
+        "name": "吴昊",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 89,
+          "physics": 88,
+          "chemistry": 90,
+          "computer": 87,
+          "english": 85,
+          "history": 86
+        }
+      },
+      {
+        "name": "郑爽",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 85,
+          "physics": 84,
+          "chemistry": 88,
+          "computer": 90,
+          "english": 89,
+          "history": 92
+        }
+      },
+      {
+        "name": "王芳",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 88,
+          "physics": 90,
+          "chemistry": 87,
+          "computer": 89,
+          "english": 92,
+          "history": 91
+        }
+      },
+      {
+        "name": "冯晓",
+        "gender": "男",
+        "grade": "2012",
+        "score": {
+          "math": 83,
+          "physics": 86,
+          "chemistry": 85,
+          "computer": 90,
+          "english": 87,
+          "history": 88
+        }
+      }
+    ]
+  },
+  {
+    "school": "复旦大学",
+    "students": [
+      {
+        "name": "陈思",
+        "gender": "女",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 94,
+          "computer": 89,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "魏强",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 89,
+          "computer": 90,
+          "english": 88,
+          "history": 87
+        }
+      },
+      {
+        "name": "张华",
+        "gender": "男",
+        "grade": "2012",
+        "score": {
+          "math": 86,
+          "physics": 89,
+          "chemistry": 87,
+          "computer": 88,
+          "english": 86,
+          "history": 85
+        }
+      },
+      {
+        "name": "刘燕",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 88,
+          "physics": 90,
+          "chemistry": 85,
+          "computer": 87,
+          "english": 89,
+          "history": 91
+        }
+      },
+      {
+        "name": "徐斌",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 87,
+          "physics": 85,
+          "chemistry": 86,
+          "computer": 88,
+          "english": 84,
+          "history": 85
+        }
+      }
+    ]
+  },
+  {
+    "school": "中国人民大学",
+    "students": [
+      {
+        "name": "苗学霸",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 100,
+          "physics": 100,
+          "chemistry": 100,
+          "computer": 100,
+          "english": 100,
+          "history": 60
+        }
+      },
+      {
+        "name": "史仙子",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 100,
+          "physics": 100,
+          "chemistry": 60,
+          "computer": 100,
+          "english": 100,
+          "history": 100
+        }
+      },
+      {
+        "name": "黄磊",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 91,
+          "chemistry": 89,
+          "computer": 88,
+          "english": 87,
+          "history": 86
+        }
+      },
+      {
+        "name": "赵丽",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 90,
+          "computer": 91,
+          "english": 89,
+          "history": 88
+        }
+      },
+      {
+        "name": "刘强",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 88,
+          "physics": 89,
+          "chemistry": 87,
+          "computer": 90,
+          "english": 85,
+          "history": 86
+        }
+      },
+      {
+        "name": "杨柳",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 87,
+          "physics": 85,
+          "chemistry": 88,
+          "computer": 89,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "郭亮",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 84,
+          "physics": 86,
+          "chemistry": 85,
+          "computer": 87,
+          "english": 88,
+          "history": 87
+        }
+      }
+    ]
+  },
+  {
+    "school": "上海交通大学",
+    "students": [
+      {
+        "name": "孙辉",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 89,
+          "physics": 90,
+          "chemistry": 91,
+          "computer": 92,
+          "english": 88,
+          "history": 89
+        }
+      },
+      {
+        "name": "周静",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 88,
+          "chemistry": 90,
+          "computer": 87,
+          "english": 89,
+          "history": 84
+        }
+      },
+      {
+        "name": "吴刚",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 87,
+          "physics": 89,
+          "chemistry": 88,
+          "computer": 85,
+          "english": 86,
+          "history": 87
+        }
+      },
+      {
+        "name": "郑华",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 89,
+          "computer": 91,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "王敏",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 85,
+          "physics": 86,
+          "chemistry": 87,
+          "computer": 88,
+          "english": 84,
+          "history": 85
+        }
+      }
+    ]
+  },
+  {
+    "school": "南京大学",
+    "students": [
+      {
+        "name": "赵宇",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 94,
+          "computer": 89,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "钱芳",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 89,
+          "computer": 90,
+          "english": 88,
+          "history": 87
+        }
+      },
+      {
+        "name": "孙伟",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 88,
+          "physics": 89,
+          "chemistry": 90,
+          "computer": 87,
+          "english": 85,
+          "history": 86
+        }
+      },
+      {
+        "name": "李静",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 86,
+          "physics": 84,
+          "chemistry": 88,
+          "computer": 90,
+          "english": 89,
+          "history": 92
+        }
+      },
+      {
+        "name": "周强",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 87,
+          "physics": 85,
+          "chemistry": 86,
+          "computer": 88,
+          "english": 84,
+          "history": 85
+        }
+      }
+    ]
+  },
+  {
+    "school": "武汉大学",
+    "students": [
+      {
+        "name": "吴丽",
+        "gender": "女",
+        "grade": "2010",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 89,
+          "computer": 90,
+          "english": 88,
+          "history": 87
+        }
+      },
+      {
+        "name": "郑敏",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 88,
+          "physics": 90,
+          "chemistry": 87,
+          "computer": 89,
+          "english": 85,
+          "history": 86
+        }
+      },
+      {
+        "name": "王华",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 94,
+          "computer": 89,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "刘强",
+        "gender": "男",
+        "grade": "2013",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 89,
+          "computer": 90,
+          "english": 88,
+          "history": 87
+        }
+      },
+      {
+        "name": "张丽",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 88,
+          "physics": 90,
+          "chemistry": 87,
+          "computer": 89,
+          "english": 85,
+          "history": 86
+        }
+      }
+    ]
+  },
+  {
+    "school": "四川大学",
+    "students": [
+      {
+        "name": "李浩",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 91,
+          "chemistry": 89,
+          "computer": 88,
+          "english": 87,
+          "history": 86
+        }
+      },
+      {
+        "name": "王敏",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 87,
+          "chemistry": 90,
+          "computer": 91,
+          "english": 89,
+          "history": 88
+        }
+      },
+      {
+        "name": "陈刚",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 88,
+          "physics": 89,
+          "chemistry": 87,
+          "computer": 90,
+          "english": 85,
+          "history": 86
+        }
+      },
+      {
+        "name": "赵丽",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 87,
+          "physics": 85,
+          "chemistry": 88,
+          "computer": 89,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "刘华",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 84,
+          "physics": 86,
+          "chemistry": 85,
+          "computer": 87,
+          "english": 88,
+          "history": 87
+        }
+      }
+    ]
+  },
+  {
+    "school": "哈尔滨工业大学",
+    "students": [
+      {
+        "name": "杨华",
+        "gender": "男",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 91,
+          "chemistry": 92,
+          "computer": 93,
+          "english": 88,
+          "history": 89
+        }
+      },
+      {
+        "name": "孙丽",
+        "gender": "女",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 88,
+          "chemistry": 90,
+          "computer": 87,
+          "english": 89,
+          "history": 84
+        }
+      },
+      {
+        "name": "吴刚",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 87,
+          "physics": 89,
+          "chemistry": 88,
+          "computer": 85,
+          "english": 86,
+          "history": 87
+        }
+      },
+      {
+        "name": "郑华",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 89,
+          "computer": 91,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "王敏",
+        "gender": "女",
+        "grade": "2011",
+        "score": {
+          "math": 85,
+          "physics": 86,
+          "chemistry": 87,
+          "computer": 88,
+          "english": 84,
+          "history": 85
+        }
+      }
+    ]
+  },
+  {
+    "school": "同济大学",
+    "students": [
+      {
+        "name": "李丽",
+        "gender": "女",
+        "grade": "2010",
+        "score": {
+          "math": 90,
+          "physics": 91,
+          "chemistry": 92,
+          "computer": 93,
+          "english": 88,
+          "history": 89
+        }
+      },
+      {
+        "name": "周强",
+        "gender": "男",
+        "grade": "2012",
+        "score": {
+          "math": 85,
+          "physics": 88,
+          "chemistry": 90,
+          "computer": 87,
+          "english": 89,
+          "history": 84
+        }
+      },
+      {
+        "name": "孙伟",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 87,
+          "physics": 89,
+          "chemistry": 88,
+          "computer": 85,
+          "english": 86,
+          "history": 87
+        }
+      },
+      {
+        "name": "吴敏",
+        "gender": "女",
+        "grade": "2013",
+        "score": {
+          "math": 90,
+          "physics": 92,
+          "chemistry": 89,
+          "computer": 91,
+          "english": 90,
+          "history": 91
+        }
+      },
+      {
+        "name": "郑刚",
+        "gender": "男",
+        "grade": "2011",
+        "score": {
+          "math": 85,
+          "physics": 86,
+          "chemistry": 87,
+          "computer": 88,
+          "english": 84,
+          "history": 85
+        }
+      }
+    ]
+  }
+]
