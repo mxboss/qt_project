@@ -10,6 +10,7 @@
 #include <QString>
 #include "NetworkStudyPanel.h"
 #include "CustomTreeView.h"
+#include "ServerWidget.h"
 
 ContentCell::ContentCell(QWidget *parent) :
     QWidget(parent),
@@ -72,6 +73,10 @@ void ContentCell::mousePressEvent(QMouseEvent *event) {
     } else if (dataModel.type == 5) {
         //自定义TreeView
         CustomTreeView *view = new CustomTreeView();
+        view->show();
+    } else if (dataModel.type == 6) {
+        //网络模拟
+        ServerWidget *view = new ServerWidget();
         view->show();
     }
     QWidget::mousePressEvent(event);

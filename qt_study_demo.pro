@@ -37,6 +37,7 @@ SOURCES += \
         MyUtil.cpp \
         NetworkStudyPanel.cpp \
         ScoreTableWidget.cpp \
+        ServerWidget.cpp \
         StudentTreeWidget.cpp \
         main.cpp \
         widget.cpp
@@ -54,6 +55,7 @@ HEADERS += \
         MyUtil.h \
         NetworkStudyPanel.h \
         ScoreTableWidget.h \
+        ServerWidget.h \
         StudentTreeWidget.h \
         singleton.h \
         widget.h
@@ -62,6 +64,7 @@ FORMS += \
         ContentCell.ui \
         CustomTreeView.ui \
         NetworkStudyPanel.ui \
+        ServerWidget.ui \
         widget.ui
 
 # Default rules for deployment.

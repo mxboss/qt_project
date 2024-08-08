@@ -19,7 +19,8 @@
         "content": "QTreeWidget 是 Qt 框架提供的一个用于显示树形结构数据的控件，可以展示包含父子关系的数据，并且支持展开、折叠、选择等操作。",
         "typeDesc": "容器组件",
         "type": 3
-      },{
+      },
+      {
         "title": "自定义Model的TreeWidget",
         "content": "QTreeWidget 是 Qt 框架提供的一个用于显示树形结构数据的控件，可以展示包含父子关系的数据，并且支持展开、折叠、选择等操作。",
         "typeDesc": "容器组件",
@@ -35,6 +36,12 @@
         "content": "使用get请求加载图片",
         "typeDesc": "网络",
         "type": 4
+      },
+      {
+        "title": "TCP连接",
+        "content": "模拟网络连接",
+        "typeDesc": "网络",
+        "type": 6
       }
     ]
   }
