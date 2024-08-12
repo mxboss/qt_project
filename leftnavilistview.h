@@ -7,13 +7,14 @@ namespace Ui {
 class Widget;
 }
 
-class QJsonArray;
+#include <QJsonArray>
 class QStandardItemModel;
 class LeftNaviListWidgetDelegate;
 
 class LeftNaviListView : public QListView
 {
     Q_OBJECT
+
     Q_PROPERTY(QJsonArray* dataList READ dataList WRITE setDataList NOTIFY dataListDidChanged)
 
 public:

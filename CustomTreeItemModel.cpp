@@ -163,15 +163,15 @@ bool CustomFilterModel::filterAcceptsRow(int source_row, const QModelIndex& sour
     CustomTreeItem *it = idx.data(Qt::UserRole).value<CustomTreeItem *>();
     if (it != nullptr) {
         QString origin = it->data(searchColumn).toString();
-        qDebug() << "fffff" << origin;
-        if (keyWord!=nullptr && origin.contains(keyWord)) {
+        // origin.contains()
+        if (keyWord!=nullptr && origin.contains(*keyWord)) {
             return true;
         }
 
         for (int row = 0 ; row <it->childCount() ; row++) {
             CustomTreeItem *childItem = it->child(row);
             qDebug() << "child:" << childItem->data(searchColumn).toString();
-            if (keyWord!=nullptr && childItem->data(searchColumn).toString().contains(keyWord)) {
+            if (keyWord!=nullptr && childItem->data(searchColumn).toString().contains(*keyWord)) {
                 return true;
             }
         }

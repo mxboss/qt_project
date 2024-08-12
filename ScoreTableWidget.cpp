@@ -28,7 +28,7 @@ void ScoreTableWidget::setUpUi()
     QVBoxLayout *layout = new QVBoxLayout(this);
     setLayout(layout);
 
-    QLabel *label = new QLabel(m_school + QString("学生分数："));
+    QLabel *label = new QLabel(*m_school + QString("学生分数："));
     label->setFont(QFont("微软雅黑",25,QFont::Bold));
     layout->addWidget(label);
 

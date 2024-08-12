@@ -5,7 +5,10 @@
 #include <QUrl>
 #include <QNetworkReply>
 #include <QSslSocket>
-
+#include <QLabel>
+#include "MyWebImageView.h"
+#include <QJsonObject>
+#include <QJsonDocument>
 
 NetworkStudyPanel::NetworkStudyPanel(QWidget *parent) :
     QWidget(parent),
@@ -14,19 +17,6 @@ NetworkStudyPanel::NetworkStudyPanel(QWidget *parent) :
     ui->setupUi(this);
     netManager = new QNetworkAccessManager(this);
     setupSubViews();
-
-    qDebug() << "NENENENENENE";
-    connect(netManager, &QNetworkAccessManager::finished, this, [&](){
-        qDebug() << "END";
-    });
-
-    qDebug() << QSslSocket::sslLibraryBuildVersionString();
-
-    // 连接错误信号
-//    QObject::connect(reply, &QNetworkReply::error, [&](QNetworkReply::NetworkError error) {
-//        qDebug() << "Error occurred:" << error;
-//    });
-
 }
 
 NetworkStudyPanel::~NetworkStudyPanel()
@@ -48,56 +38,49 @@ void NetworkStudyPanel::doProcessReadyRead()
     }
 }
 
+void NetworkStudyPanel::updateDogsView(QString* url)
+{
+    MyWebImageView *imgView = new MyWebImageView(url,this);
+
+    ui->gridLayout->addWidget(imgView);
+}
+
 
 void NetworkStudyPanel::on_pushButton_clicked()
 {
+    // QString imgu("https://images.dog.ceo/breeds/pembroke/n02113023_6015.jpg");
+    // updateDogsView(&imgu);
+    // return;
+    qDebug() << "sslLibraryBuildVersionString:" << QSslSocket::sslLibraryBuildVersionString();
     qDebug() << "SSL support:" << QSslSocket::supportsSsl();
     qDebug() << "OpenSSL version:" << QSslSocket::sslLibraryVersionString();
     qDebug() << "OpenSSL version number:" << QSslSocket::sslLibraryVersionNumber();
-//    return;
-//    // 创建网络访问管理器
-//    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-//    // 创建请求
-//    QNetworkRequest request(QUrl("https://dog.ceo/api/breed/pembroke/images/random"));
-////    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+    // 创建请求
+    // QNetworkRequest request(QUrl("https://dog.ceo/api/breed/pembroke/images/random"));
+    QNetworkRequest *request = new QNetworkRequest(QUrl("https://dog.ceo/api/breed/pembroke/images/random"));
+    // request.setRawHeader("User-Agent", "MyQTAgent Example");
+    request->setTransferTimeout(5000);
+    // 发起HTTPS GET请求
+    QNetworkReply *reply = netManager->get(*request);
 
-//    // 发起HTTPS GET请求
-//    QNetworkReply *reply = manager.get(request);
-
-//    // 连接信号以处理响应
-//    QObject::connect(reply, &QNetworkReply::finished, [&]() {
-//        if (reply->error() == QNetworkReply::NoError) {
-//            qDebug() << "HTTPS request succeeded!";
-//            qDebug() << "Response:" << reply->readAll();
-//        } else {
-//            qDebug() << "HTTPS request failed with error:" << reply->errorString();
-//        }
-////        reply->deleteLater();
-//    });
-//    QObject::connect(reply,&QIODevice::readyRead, this, &NetworkStudyPanel::doProcessReadyRead);
-
-    QNetworkRequest req(QUrl("https://dog.ceo/api/breed/pembroke/images/random"));
-    netManager->get(req);
-//    QObject::connect(netManager, SIGNAL(readyRead()) ,this, &NetworkStudyPanel::doProcessReadyRead);
-//    QObject::connect(reply,&QIODevice::readyRead, this, &NetworkStudyPanel::doProcessReadyRead);
-
-//        connect(reply,SIGNAL(readyRead()),this,SLOT(doProcessReadyRead()));//数据来临的信号，IO操作大多数都是这个信号
-//        connect(reply,SIGNAL(error(QNetworkReply::NetworkError)),this,SLOT(doProcessError(QNetworkReply::NetworkError)));
-//        connect(reply,SIGNAL(finished()),this,SLOT(doProcessFinished()));//传输（一次应答）完成
-//        //会将总文件长度，和当前文件传输长度反馈到参数中，正适合做进度条
-//        connect(reply,SIGNAL(downloadProgress(qint64,qint64)),this,SLOT(doProcessDownload(qint64,qint64)));
-
-//        QStringList list = url_str.split("/");
-//        QString filename = list.at(list.length()-1);
-//        myFile->setFileName(filename);
-//        bool ret = myFile->open(QIODevice::WriteOnly|QIODevice::Truncate);//以重写的方式打开，在写入新的数据时会将原有
-//                                                                            //数据全部清除，游标设置在文件开头。
-//        ui->progressBar->setValue(0);
-//        ui->progressBar->setMinimum(0);
-//    ————————————————
-
-//                                Designed by Jack Chen
-
-//    原文链接：https://blog.csdn.net/weixin_40615338/article/details/122343555
+    connect(reply,&QNetworkReply::socketStartedConnecting,this,[](){
+        qDebug() << "startSocketConnecting";
+    });
+    // 连接信号以处理响应
+    QObject::connect(reply, &QNetworkReply::finished,this, [this,reply]() {
+        if (reply->error() == QNetworkReply::NoError) {
+            qDebug() << "HTTPS request succeeded!";
+            qDebug() << "Response:" << reply->readAll();
+            QJsonObject data = QJsonDocument::fromJson(reply->readAll()).object();
+            QString imgurl = data["message"].toString();
+            updateDogsView(&imgurl);
+        } else {
+            qDebug() << "HTTPS request failed with error:" << reply->errorString();
+        }
+        //        reply->deleteLater();
+    });
+    connect(reply, &QNetworkReply::errorOccurred,[](QNetworkReply::NetworkError error){
+        qDebug() << "errorOccurred" << error;
+    });
 }

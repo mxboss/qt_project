@@ -1,6 +1,5 @@
 #include "LeftNaviListView.h"
 #include <QDebug>
-#include <QJsonArray>
 #include <QJsonObject>
 #include <QFile>
 #include <QStandardItemModel>
@@ -78,7 +77,8 @@ void LeftNaviListView::setDataList(QJsonArray* dataList)
     emit dataListDidChanged();
     QStringListModel *model = new QStringListModel(this);
     QStringList *list = new QStringList();
-    for(auto obj : *m_dataList) {
+    QJsonArray tmp = QJsonArray(*m_dataList);
+    for(auto obj : tmp) {
         QJsonObject o = obj.toObject();
         list->append(o["title"].toString());
     }

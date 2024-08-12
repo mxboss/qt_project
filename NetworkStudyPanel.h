@@ -29,6 +29,7 @@ private:
     QNetworkRequest *request;
 
     void setupSubViews();
+    void updateDogsView(QString* url);
 };
 
 #endif // NETWORKSTUDYPANEL_H

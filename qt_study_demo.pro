@@ -35,6 +35,7 @@ SOURCES += \
         LeftNaviListWidgetDelegate.cpp \
         MyListWidget.cpp \
         MyUtil.cpp \
+        MyWebImageView.cpp \
         NetworkStudyPanel.cpp \
         ScoreTableWidget.cpp \
         ServerWidget.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
         LeftNaviListWidgetDelegate.h \
         MyListWidget.h \
         MyUtil.h \
+        MyWebImageView.h \
         NetworkStudyPanel.h \
         ScoreTableWidget.h \
         ServerWidget.h \
